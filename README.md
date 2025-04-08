@@ -43,4 +43,6 @@ The dataset consists of 7 CSV files:
 
 The logical model should fit the given datasets to create a suitable physical schema.
 
-Note: the challenge's credit belongs to [Gianluca Quercini](https://gquercini.github.io/) 
+## Note: 
+
+The challenge's credit belongs to [Gianluca Quercini](https://gquercini.github.io/) 
