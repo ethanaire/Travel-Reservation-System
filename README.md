@@ -21,3 +21,13 @@ We intend to manage the data of a **travel reservation system** with clients all
 - The system maintains a list of hotels, with their _names, addresses, average review score by its customers_. Customers can write reviews for any hotel; in which case the system stores the _review, date and its author_. When a customer books an hotel, the system keeps the _price paid, check-in / check-out dates, additional services (e.g., breakfast)_.
 
 ## Project Tasks: 
+
+Design of a Relational Database: 
+1. Conceptual Schema
+2. Normalization
+3. Logical Model
+4. Physical Schema
+5. Database Creation and Data Import
+6. Analytics Queries
+
+Note: the challenge's credit belongs to [Gianluca Quercini](https://gquercini.github.io/) 
