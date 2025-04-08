@@ -12,8 +12,12 @@ We intend to manage the data of a **travel reservation system** with clients all
 
 - A flight connects two airports, including _name (e.g., London Heathrow Airport), IATA (e.g., LHR) and ICAO code (e.g., EGLL)_; each airport serves a _specific location (e.g., London, UK)_ and its precise position is stored in form of _geographic coordinates (latitude and longitude)_.
 
-A flight connecting two airports at specific departure and arrival times is identified by a flight number. Two flights operated by two different airline companies cannot have the same flight number, but the same flight number can denote two flights operated by the same airline company on different days.
+- A flight has its own _flight number_ accompanied by separate _departure and arrival times_.
 
-For each flight booked by a customer, the system keeps the seat number, the travel class (e.g., economy or business), the price and the date of the flight. Usually, airlines include details on the type of aircraft they plan to use on their flight schedules; these details include the name of the aircraft (e.g., Boeing 787-8) and, when available, the IATA code (e.g., 788, a unique three-letter identifier for the aircraft) and the ICAO code (e.g., B788, a unique four-letter identifier for the aircraft).
+- Two flights of a route by two different airline companies **cannot have the same flight number**, but _the flight number can remain unchanged on different days at the same time period_.
 
-The system maintains a list of hotels, with their names, addresses and an average review score, which is a real number denoting the average grade assigned to the hotel by its customers. Customers can write a review for an hotel; in which case the system stores the text of the review, the date and its author. When a customer books an hotel, the system keeps the price paid, the check-in and check-out dates and whether the breakfast is included.
+- The flight booking information includes _seat number, travel class (e.g., economy / business), price, flight date_. Usually, airlines can also provide details on the aircraft model with _model name(e.g., Boeing 787-8), IATA code (e.g., 788, a unique three-letter identifier for the aircraft), ICAO code (e.g., B788, a unique four-letter identifier for the aircraft)_.
+
+- The system maintains a list of hotels, with their _names, addresses, average review score by its customers_. Customers can write reviews for any hotel; in which case the system stores the _review, date and its author_. When a customer books an hotel, the system keeps the _price paid, check-in / check-out dates, additional services (e.g., breakfast)_.
+
+## Project Tasks: 
