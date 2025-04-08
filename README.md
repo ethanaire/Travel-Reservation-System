@@ -30,4 +30,19 @@ Design of a Relational Database:
 5. Database Creation and Data Import
 6. Analytics Queries
 
-Note: the challenge's credit belongs to [Gianluca Quercini](https://gquercini.github.io/) 
+## Datasets: 
+
+The dataset consists of 7 CSV files: 
+- aircrafts.csv
+- airlines.csv
+- airports.csv
+- hotels.csv
+- customers.csv
+- hotel_bookings.csv
+- flight_bookings.csv
+
+The logical model should fit the given datasets to create a suitable physical schema.
+
+## Note: 
+
+The challenge's credit belongs to [Gianluca Quercini](https://gquercini.github.io/) 
