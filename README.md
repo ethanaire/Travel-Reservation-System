@@ -22,17 +22,13 @@ We intend to manage the data of a **travel reservation system** with clients all
 
 ## Project Tasks: 
 
-Design of a Relational Database: 
-1. Conceptual Schema
-2. Normalization
-3. Logical Model
-4. Physical Schema
-5. Database Creation and Data Import
-6. Analytics Queries
+**Design of a Relational Database**: 
+
+Conceptual Schema → Normalization → Logical Model → Physical Schema → Database Creation and Data Import → Analytics Queries
 
 ## Datasets: 
 
-The dataset consists of 7 CSV files: 
+The dataset consists of **7 CSV files**: 
 - aircrafts.csv
 - airlines.csv
 - airports.csv
@@ -45,7 +41,7 @@ The logical model should fit the given datasets to create a suitable physical sc
 
 ## Logical Model: 
 
-<img title="Logical Model" alt="Alt text" src="/Assets/Logical Model.png">
+<img title="Logical Model" alt="Alt text" src="/Assets/Logical Model.png" style="height: 500px; width:650px;"/>
 
 ## Note: 
 
