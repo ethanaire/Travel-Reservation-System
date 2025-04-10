@@ -1,3 +1,6 @@
+-- Create schema
+CREATE SCHEMA IF NOT EXISTS travel_reservation;
+
 -- Table: Aircrafts
 CREATE TABLE Aircrafts (
     aircraft_name VARCHAR(100) PRIMARY KEY,
