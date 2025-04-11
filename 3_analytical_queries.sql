@@ -36,3 +36,46 @@ SELECT
 FROM FlightBookings
 GROUP BY month
 ORDER BY month;
+
+-- 4. Aircraft Utilization
+-- Find which aircraft types are most commonly used.
+SELECT 
+    aircraft,
+    COUNT(*) AS usage_count
+FROM FlightBookings
+GROUP BY aircraft
+ORDER BY usage_count DESC;
+
+-- 5. Hotel Ratings by City
+-- Determine where high-rated hotels are concentrated.
+SELECT 
+    city,
+    AVG(hotel_score) AS avg_score
+FROM Hotels
+GROUP BY city
+HAVING COUNT(*) > 5
+ORDER BY avg_score DESC
+LIMIT 10;
+
+-- 6. Impact of Breakfast Inclusion on Hotel Booking Price
+-- Evaluate how breakfast impacts hotel pricing.
+SELECT 
+    breakfast_included,
+    AVG(price) AS avg_price
+FROM HotelBookings
+GROUP BY breakfast_included;
+
+-- 7. Frequent Travelers
+-- Identify repeat travelers who book multiple trips.
+SELECT 
+    customer_id,
+    COUNT(DISTINCT trip_id) AS trip_count
+FROM FlightBookings
+GROUP BY customer_id
+HAVING trip_count > 1
+ORDER BY trip_count DESC;
+
+
+
+
+
