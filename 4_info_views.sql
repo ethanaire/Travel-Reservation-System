@@ -65,3 +65,17 @@ SELECT
 FROM hotel_bookings hb
 JOIN hotels h ON hb.hotel_id = h.hotel_id
 GROUP BY hb.hotel_id, h.hotel_namename, month;
+
+-- 6. Airport Traffic View
+-- Top airports by the number of departures and arrivals.
+CREATE VIEW v_airport_traffic AS
+SELECT
+  ap.airport_id,
+  ap.airport_name,
+  COUNT(f1.flight_id) AS departures,
+  COUNT(f2.flight_id) AS arrivals,
+  COUNT(f1.flight_id) + COUNT(f2.flight_id) AS total_traffic
+FROM airports ap
+LEFT JOIN flightbookings fb1 ON ap.airport_id = fb1.airport_src
+LEFT JOIN flightbookings fb2 ON ap.airport_id = fb2.airport_dst
+GROUP BY ap.airport_id, ap.airport_name;
