@@ -54,3 +54,14 @@ GROUP BY fb.airport_src, fb.airport_dst, ap1.name, ap2.name;
 
 -- 5. Hotel Booking Trends View
 -- Useful to analyze hotel check-in/check-out trends and revenue.
+CREATE VIEW v_hotel_trends AS
+SELECT
+  hb.hotel_id,
+  h.hotel_name,
+  DATE_TRUNC('month', hb.check_in_date) AS month,
+  COUNT(*) AS total_bookings,
+  SUM(hb.price) AS total_revenue,
+  AVG(hb.price) AS avg_price
+FROM hotel_bookings hb
+JOIN hotels h ON hb.hotel_id = h.hotel_id
+GROUP BY hb.hotel_id, h.hotel_namename, month;
