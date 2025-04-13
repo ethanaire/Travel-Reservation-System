@@ -56,3 +56,10 @@ FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (trip_id, customer_id, hotel_id, check_in_date, check_out_date, price, breakfast_included);
+
+-- Data Import Check-up 
+SELECT * FROM aircrafts LIMIT 10; 
+SELECT * FROM airlines LIMIT 10;
+SELECT * FROM airports LIMIT 10;
+SELECT * FROM customers LIMIT 10;
+
