@@ -3,9 +3,10 @@ CREATE SCHEMA IF NOT EXISTS travel_reservation;
 
 -- Table: Aircrafts
 CREATE TABLE Aircrafts (
-    aircraft_name VARCHAR(100) PRIMARY KEY,
-    aircraft_iata CHAR(3),
-    aircraft_icao CHAR(4)
+    aircraft_name VARCHAR(100),
+	aircraft_iata CHAR(10),
+	aircraft_icao CHAR(10), 
+	PRIMARY KEY (aircraft_iata, aircraft_icao)
 );
 
 -- Table: Airlines
@@ -13,8 +14,8 @@ CREATE TABLE Airlines (
     airline_id INT PRIMARY KEY,
     airline_name VARCHAR(100),
     country VARCHAR(100),
-    airline_iata CHAR(2),
-    airline_icao CHAR(3),
+    airline_iata CHAR(10),
+    airline_icao CHAR(10),
     alias VARCHAR(100)
 );
 
@@ -24,10 +25,10 @@ CREATE TABLE Airports (
     airport_name VARCHAR(100),
     city VARCHAR(100),
     country VARCHAR(100),
-    airport_iata CHAR(3),
-    airport_icao CHAR(4),
-    latitude DOUBLE,
-    longitude DOUBLE
+    airport_iata CHAR(10),
+    airport_icao CHAR(10),
+    latitude VARCHAR(50),
+    longitude VARCHAR(50)
 );
 
 -- Table: Customers
@@ -45,7 +46,7 @@ CREATE TABLE Customers (
 CREATE TABLE Hotels (
     hotel_id INT PRIMARY KEY,
     hotel_name VARCHAR(100),
-    hotel_address VARCHAR(200),
+    hotel_address VARCHAR(500),
     city VARCHAR(100),
     country VARCHAR(100),
     hotel_score DECIMAL(3,2)
@@ -69,7 +70,7 @@ CREATE TABLE FlightBookings (
     PRIMARY KEY (trip_id, customer_id, flight_number, departure_date),
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
     FOREIGN KEY (airline_id) REFERENCES Airlines(airline_id),
-    FOREIGN KEY (aircraft) REFERENCES Aircrafts(aircraft_name),
+    -- FOREIGN KEY (aircraft) REFERENCES Aircrafts(aircraft_iata),
     FOREIGN KEY (airport_src) REFERENCES Airports(airport_id),
     FOREIGN KEY (airport_dst) REFERENCES Airports(airport_id)
 );
