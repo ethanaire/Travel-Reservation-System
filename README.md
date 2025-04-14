@@ -35,7 +35,7 @@ The logical model should fit the given datasets to create a suitable physical sc
 
 ## Physical Schema: 
 <p align="center">
-  <img title="Logical Model" alt="Alt text" src="/Assets/physical_schema.png" width="750" height="550">
+  <img title="Logical Model" alt="Alt text" src="/Assets/Physical Schema.png" width="900" height="530">
 
 ## Data Preprocessing Execution:
 
