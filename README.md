@@ -22,7 +22,8 @@ We intend to manage the data of a **travel reservation system** with clients all
 
 ## Project Tasks: 
 
-Conceptual Schema → Normalization → Logical Model → Physical Schema → Database Creation → Data Preprocessing and Importing → Analytics Queries, Information Views -> Design Dashboards
+- Conceptual Schema → Logical Model → Physical Schema → Database Creation 
+- Data Preprocessing and Importing → Analytics Queries, Information Views -> Design Dashboards
 
 ## Data Models: 
 
@@ -32,7 +33,7 @@ Conceptual Schema → Normalization → Logical Model → Physical Schema → Da
 
 The logical model should fit the given datasets to create a suitable physical schema.
 
-## Logical Model: 
+## Physical Schema: 
 <p align="center">
   <img title="Logical Model" alt="Alt text" src="/Assets/physical_schema.png" width="750" height="550">
 
