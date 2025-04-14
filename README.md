@@ -35,8 +35,20 @@ The logical model should fit the given datasets to create a suitable physical sc
 ## Logical Model: 
 <p align="center">
   <img title="Logical Model" alt="Alt text" src="/Assets/physical_schema.png" width="750" height="550">
+
+## Data Preprocessing Execution:
+
+To install dependencies:
+```bash
+pip install -r requirements.txt
+```
+To execute the full pipeline, run:
+
+```bash
+python data_preprocessing.py
+```
   
-## Project Tasks: 
+## Technologies: 
 
 - Languages: python, SQL.
 - Tools: VSCode, PostgreSQL, pgAdmin4, PowerBI.
