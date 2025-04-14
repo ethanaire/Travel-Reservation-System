@@ -1,0 +1,9 @@
+# Core libraries for data manipulation and analysis
+pandas==1.5.3
+numpy==1.24.1
+
+# Environment management (optional but useful for managing settings)
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.2.2
