@@ -33,9 +33,9 @@ Conceptual Schema → Normalization → Logical Model → Physical Schema → Da
 The logical model should fit the given datasets to create a suitable physical schema.
 
 ## Logical Model: 
-
-<img title="Logical Model" alt="Alt text" src="/Assets/physical_schema.png" width="750" height="550">
-
+<p align="center">
+  <img title="Logical Model" alt="Alt text" src="/Assets/physical_schema.png" width="750" height="550">
+  
 ## Project Tasks: 
 
 - Languages: python, SQL.
