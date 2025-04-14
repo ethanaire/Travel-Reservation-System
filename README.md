@@ -22,20 +22,13 @@ We intend to manage the data of a **travel reservation system** with clients all
 
 ## Project Tasks: 
 
-**Design of a Relational Database**: 
+Conceptual Schema → Normalization → Logical Model → Physical Schema → Database Creation → Data Preprocessing and Importing → Analytics Queries, Information Views -> Design Dashboards
 
-Conceptual Schema → Normalization → Logical Model → Physical Schema → Database Creation and Data Import → Analytics Queries
+## Data Models: 
 
-## Datasets: 
-
-The dataset consists of **7 CSV files**: 
-- aircrafts.csv
-- airlines.csv
-- airports.csv
-- hotels.csv
-- customers.csv
-- hotel_bookings.csv
-- flight_bookings.csv
+- `customers.csv` → `flight_bookings.csv` & `hotel_bookings.csv`
+- `airlines.csv`, `aircrafts.csv`, `airports.csv` → enrich `flight_bookings.csv`
+- `hotels.csv` → enrich `hotel_bookings.csv`
 
 The logical model should fit the given datasets to create a suitable physical schema.
 
@@ -43,6 +36,11 @@ The logical model should fit the given datasets to create a suitable physical sc
 
 <img title="Logical Model" alt="Alt text" src="/Assets/Physical Schema.png">
 
+## Project Tasks: 
+
+- Languages: python, SQL.
+- Tools: VSCode, PostgreSQL, pgAdmin4, PowerBI.
+  
 ## Note: 
 
 The challenge's credit belongs to [Gianluca Quercini](https://gquercini.github.io/) 
