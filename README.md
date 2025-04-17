@@ -31,7 +31,7 @@ python data_preprocessing.py
 - `airlines.csv`, `aircrafts.csv`, `airports.csv` → enrich `flight_bookings.csv`
 - `hotels.csv` → enrich `hotel_bookings.csv`
 
-The logical model should fit the given datasets to create a suitable physical schema.
+The logical model should fit the given datasets to enable Power BI's data modeling part.
 <p align="center">
   <img title="Data Model" alt="Alt text" src="/Assets/Power BI Modeling.png" width="900" height="530">
   
