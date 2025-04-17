@@ -41,7 +41,7 @@ The logical model should fit the given datasets to create a suitable physical sc
 
 - The given datasets are currently in `.csv` format whose possible delimiter (tab `\t` or commas `,`) and quotechar problems should be handled before being imported into each table.
 
-- Besides, PostgreSQL only accepts `DATE` values in `YYYY-MM-DD` format while all available date-related values are in `DD-MM_YYYY`. Data type transformation is also required for valid data importing.
+- Besides, PostgreSQL only accepts `DATE` values in `YYYY-MM-DD` format while all available date-related values are in `DD-MM-YYYY`. Data type transformation is also required for valid data importing.
 
 - To install dependencies:
 ```bash
