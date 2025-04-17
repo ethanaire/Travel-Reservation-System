@@ -1,17 +1,9 @@
 # Designing a Travel Reservation System
 
-## Project Tasks: 
+## Task Flows: 
 
 - Conceptual Schema → Logical Model → Physical Schema → Database Creation 
 - Data Preprocessing and Importing → Analytics Queries, Information Views -> Design Dashboards
-
-## Data Models: 
-
-- `customers.csv` → `flight_bookings.csv` & `hotel_bookings.csv`
-- `airlines.csv`, `aircrafts.csv`, `airports.csv` → enrich `flight_bookings.csv`
-- `hotels.csv` → enrich `hotel_bookings.csv`
-
-The logical model should fit the given datasets to create a suitable physical schema.
 
 ## Physical Schema: 
 <p align="center">
@@ -32,6 +24,16 @@ pip install -r requirements.txt
 ```bash
 python data_preprocessing.py
 ```
+
+## Data Model: 
+
+- `customers.csv` → `flight_bookings.csv` & `hotel_bookings.csv`
+- `airlines.csv`, `aircrafts.csv`, `airports.csv` → enrich `flight_bookings.csv`
+- `hotels.csv` → enrich `hotel_bookings.csv`
+
+The logical model should fit the given datasets to create a suitable physical schema.
+<p align="center">
+  <img title="Data Model" alt="Alt text" src="/Assets/Power BI Modeling.png" width="900" height="530">
   
 ## Technologies: 
 
