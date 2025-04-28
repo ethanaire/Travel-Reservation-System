@@ -2,8 +2,45 @@
 
 ## Calendar table:
 
-- create table: 
-calendar = CALENDAR(MIN(flight_bookings[departure_date]), MAX(flight_bookings[departure_date]))
+- Create table: 
+
+  calendar = CALENDAR(MIN(flight_bookings[departure_date]), MAX(flight_bookings[departure_date]))
 
 - month column: 
-month = FORMAT(Calendar[date], "MMMM")
+
+  month = FORMAT(Calendar[date], "MMMM")
+
+## City table: 
+
+- Create table:
+
+  city = 
+  DISTINCT (
+      UNION (
+          SELECTCOLUMNS(airports, "City", airports[city]),
+          SELECTCOLUMNS(hotels, "City", hotels[city])
+      )
+  )
+
+- CityWithBestAirlineDiversity measure:
+
+  CityWithBestAirlineDiversity = 
+  VAR CityAirlineTable =
+      SUMMARIZE(
+          flight_bookings,
+          City[city],
+          "AirlineCount", DISTINCTCOUNT(flight_bookings[airline_id])
+      )
+  VAR TopCity =
+      TOPN(
+          1,
+          CityAirlineTable,
+          [AirlineCount],
+          DESC
+      )
+  RETURN
+      CONCATENATEX(
+          TopCity,
+          City[city] & " - " & [AirlineCount],
+          ""
+      )
