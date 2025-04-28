@@ -25,7 +25,7 @@ The dashboard named `Travel Reservation System` consists of 3 pages: Overview, T
 
 **Overview** Page: 
 <p align="center">
-  <img title="Data Model" alt="Alt text" src="/Assets/Dashboard_Overview.png" width="900" height="530">
+  <img title="Data Model" alt="Alt text" src="/Assets/Dashboard_Overview.png" width="900" height="520">
 
 ## Data Preprocessing Execution:
 
