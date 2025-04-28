@@ -17,7 +17,7 @@
 
 The logical model should fit the given datasets to enable Power BI's data modeling part.
 <p align="center">
-  <img title="Data Model" alt="Alt text" src="/Assets/Power BI Modeling.png" width="900" height="530">
+  <img title="Data Model" alt="Alt text" src="/Assets/Power BI Modeling.png" width="900" height="466">
 
 ## Analytical Dashboard: 
 
