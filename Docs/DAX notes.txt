@@ -8,7 +8,7 @@ Calendar table:
 
   month = FORMAT(Calendar[date], "MMMM")
 
-## City table: 
+City table: 
 
 - Create table:
 
@@ -42,3 +42,118 @@ Calendar table:
           City[city] & " - " & [AirlineCount],
           ""
       )
+
+Customers table:
+
+- customer_age column;
+
+  customer_age = DATEDIFF(customers[customer_birth_date], TODAY(), YEAR)
+
+- age_group column: 
+
+  age_group = 
+  SWITCH(
+      TRUE(),
+      customers[customer_age] < 18, "Under 18",
+      customers[customer_age] <= 25, "18-25",
+      customers[customer_age] <= 35, "26-35",
+      customers[customer_age] <= 45, "36-45",
+      customers[customer_age] <= 60, "46-60",
+      "60+"
+  )
+
+- customer_type column: 
+
+  customer_type = 
+  VAR Trips = 
+      CALCULATE(
+          COUNT(trips[trip_id])
+      )
+  RETURN
+      IF(Trips > 1, "Repeat", "New")
+
+- booking_preference column: 
+
+  booking_preference = 
+VAR HasHotel = 
+    CALCULATE(COUNT(hotel_bookings[trip_id])) > 0
+VAR HasFlight = 
+    CALCULATE(COUNT(flight_bookings[trip_id])) > 0
+RETURN
+SWITCH(
+    TRUE(),
+    HasHotel && HasFlight, "Both",
+    HasHotel, "Hotel Only",
+    HasFlight, "Flight Only",
+    "None"
+)
+
+- customer_lifetime_value column: 
+
+  customer_lifetime_value = CALCULATE(SUM(flight_bookings[price])) + CALCULATE(SUM(hotel_bookings[price]))
+
+- customer_value_segment column: 
+
+  customer_value_segment = 
+  SWITCH(
+      TRUE(),
+      customers[customer_lifetime_value] >= 5000, "High-Value",
+      customers[customer_lifetime_value] >= 2000, "Mid-Value",
+      "Low-Value"
+  )
+
+- frequent_traveler column: 
+
+  frequent_traveler = 
+  VAR TripCount = CALCULATE(COUNT(trips[trip_id]))
+  RETURN IF(TripCount > 5, "Frequent", "Occasional")
+
+- trip_count measure: 
+
+  trip_count = 
+  CALCULATE(COUNT(trips[trip_id]), ALLEXCEPT(trips, trips[customer_id]))
+
+Flights table: 
+
+- route_city_key column: 
+
+  route_city_key = 
+  VAR srcCity = RELATED('airports'[city])
+  VAR dstCity = LOOKUPVALUE('airports'[city], 'airports'[airport_id], 'flight_bookings'[airport_dst])
+  RETURN IF(srcCity < dstCity, srcCity & " → " & dstCity, dstCity & " → " & srcCity)
+
+Hotels table: 
+
+- TopHotelWithCity measure: 
+
+  TopHotelWithCity = 
+  VAR TopHotel =
+      TOPN(
+          1,
+          Hotels,
+          Hotels[hotel_score],
+          DESC
+      )
+  RETURN
+      CONCATENATEX(
+          TopHotel,
+          Hotels[hotel_name] & " - " & Hotels[city] & " (" & FORMAT(Hotels[hotel_score], "0.00") & ")",
+          ""
+      )
+
+Trips table: 
+
+trips = 
+DISTINCT (
+    UNION (
+        SELECTCOLUMNS(flight_bookings, "trip_id", flight_bookings[trip_id], "customer_id", flight_bookings[customer_id]),
+        SELECTCOLUMNS(hotel_bookings, "trip_id", hotel_bookings[trip_id], "customer_id", hotel_bookings[customer_id])
+    )
+)
+
+
+
+
+
+
+
