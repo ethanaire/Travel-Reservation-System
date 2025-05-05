@@ -1,9 +1,9 @@
 List of SQL Queries: 
 
-1. Customer Lifetime Value (CLV) - Identify the most valuable customers.
-2. Most Popular Flight Routes - Determine which airport pairs are most commonly traveled.
-3. Seasonal Travel Demand - Analyze how flight bookings fluctuate throughout the year. 
-4. Aircraft Utilization - Find which aircraft types are most commonly used.
-5. Hotel Ratings by City - Determine where high-rated hotels are concentrated.
-6. Impact of Breakfast Inclusion on Hotel Booking Price - Evaluate how breakfast impacts hotel pricing.
-7. Frequent Travelers - Identify repeat travelers who book multiple trips.
+  1. Customer Lifetime Value (CLV) - Identify the most valuable customers.
+  2. Most Popular Flight Routes - Determine which airport pairs are most commonly traveled.
+  3. Seasonal Travel Demand - Analyze how flight bookings fluctuate throughout the year. 
+  4. Aircraft Utilization - Find which aircraft types are most commonly used.
+  5. Hotel Ratings by City - Determine where high-rated hotels are concentrated.
+  6. Impact of Breakfast Inclusion on Hotel Booking Price - Evaluate how breakfast impacts hotel pricing.
+  7. Frequent Travelers - Identify repeat travelers who book multiple trips.
