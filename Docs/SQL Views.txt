@@ -1,9 +1,22 @@
-List of SQL Queries: 
+List of SQL Views: 
 
-1. Customer Lifetime Value (CLV) - Identify the most valuable customers.
-2. Most Popular Flight Routes - Determine which airport pairs are most commonly traveled.
-3. Seasonal Travel Demand - Analyze how flight bookings fluctuate throughout the year. 
-4. Aircraft Utilization - Find which aircraft types are most commonly used.
-5. Hotel Ratings by City - Determine where high-rated hotels are concentrated.
-6. Impact of Breakfast Inclusion on Hotel Booking Price - Evaluate how breakfast impacts hotel pricing.
-7. Frequent Travelers - Identify repeat travelers who book multiple trips.
+- Customer Insight Views: 
+  1. Total spending by top individual customers
+  2. Customer Demographics
+  3. Customers by country
+  4. Customer age distribution
+  5. Top customers by spending 
+  6. Returning vs new customers
+
+- Travel Information Views: 
+  1. Aggregated flight bookings by airline, route, and class
+  2. Frequent and high-revenue flight routes
+  3. Hotel check-in/check-out trends and revenue
+  4. Route demand
+  5. Booking mix 
+
+- Operational Information Views: 
+  1. Airline usage frequency
+  2. Aircraft types per airline
+  3. Top airports by the number of departures and arrivals
+  4. Airline and airport combinations
